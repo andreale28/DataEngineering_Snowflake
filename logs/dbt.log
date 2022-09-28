@@ -1,0 +1,29 @@
+
+
+============================== 2022-09-28 02:59:31.926834 | b0b33e70-2361-45d5-863c-bd78c4040654 ==============================
+[0m02:59:31.926846 [info ] [MainThread]: Running with dbt=1.2.1
+[0m02:59:31.927237 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/sonle/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dbt_hol', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m02:59:31.927406 [debug] [MainThread]: Tracking: tracking
+[0m02:59:31.946129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e27340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e270a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e27b50>]}
+[0m02:59:31.948983 [debug] [MainThread]: Starter project path: /usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m02:59:45.500960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e2eaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e2e880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e2ec40>]}
+[0m02:59:45.501425 [debug] [MainThread]: Flushing usage events
+[0m02:59:47.652612 [error] [MainThread]: Encountered an error:
+
+[0m02:59:47.653871 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/dbt/main.py", line 129, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/dbt/main.py", line 191, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/dbt/main.py", line 238, in run_from_args
+    results = task.run()
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 325, in run
+    adapter = self.ask_for_adapter_choice()
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 255, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/usr/local/Cellar/dbt-snowflake/1.2.0/libexec/lib/python3.9/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
